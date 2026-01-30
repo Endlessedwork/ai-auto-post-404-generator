@@ -1,0 +1,237 @@
+/**
+ * AI Auto Post Generator - Admin Styles
+ */
+
+.aiapg-settings {
+    max-width: 900px;
+}
+
+/* Master Switch */
+.aiapg-master-switch {
+    padding: 20px 25px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.aiapg-master-switch.enabled {
+    background: linear-gradient(135deg, #00a32a 0%, #007017 100%);
+}
+
+.aiapg-master-switch.disabled {
+    background: linear-gradient(135deg, #72777c 0%, #50575e 100%);
+}
+
+.aiapg-switch-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.aiapg-switch-info h3 {
+    margin: 0 0 5px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.aiapg-switch-info p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+}
+
+/* Toggle Switch */
+.aiapg-toggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.aiapg-toggle input {
+    display: none;
+}
+
+.aiapg-toggle-slider {
+    width: 60px;
+    height: 32px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.aiapg-toggle-slider::before {
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    background: #fff;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.aiapg-toggle input:checked + .aiapg-toggle-slider {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.aiapg-toggle input:checked + .aiapg-toggle-slider::before {
+    transform: translateX(28px);
+}
+
+.aiapg-toggle-label {
+    margin-left: 12px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    min-width: 40px;
+}
+
+.aiapg-stats-box {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.aiapg-stats-box h3 {
+    margin: 0 0 10px;
+    color: #fff;
+}
+
+.aiapg-stats-box p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.aiapg-section {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.aiapg-section h2 {
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    color: #1d2327;
+}
+
+.aiapg-section h3 {
+    color: #50575e;
+    font-size: 14px;
+    margin: 20px 0 10px;
+    padding: 10px 0;
+    border-top: 1px dashed #ddd;
+}
+
+.aiapg-section h3:first-of-type {
+    border-top: none;
+    margin-top: 10px;
+}
+
+.aiapg-provider-settings {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.aiapg-provider-settings.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.aiapg-test-api {
+    margin-left: 10px !important;
+}
+
+.aiapg-test-result {
+    margin-left: 10px;
+    font-weight: 500;
+}
+
+.aiapg-test-result.success {
+    color: #00a32a;
+}
+
+.aiapg-test-result.error {
+    color: #d63638;
+}
+
+.aiapg-test-result.loading {
+    color: #2271b1;
+}
+
+/* Form table adjustments */
+.aiapg-section .form-table th {
+    width: 200px;
+    padding: 15px 10px 15px 0;
+}
+
+.aiapg-section .form-table td {
+    padding: 15px 10px;
+}
+
+.aiapg-section .form-table input[type="text"],
+.aiapg-section .form-table input[type="password"],
+.aiapg-section .form-table input[type="number"],
+.aiapg-section .form-table select {
+    min-width: 300px;
+}
+
+.aiapg-section .form-table input[type="number"] {
+    min-width: 100px;
+    width: auto;
+}
+
+/* Checkbox styling */
+.aiapg-section .form-table input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+/* Description text */
+.aiapg-section .description {
+    color: #646970;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+/* Submit button */
+.aiapg-settings .submit {
+    margin-top: 0;
+    padding-top: 20px;
+}
+
+/* Responsive */
+@media screen and (max-width: 782px) {
+    .aiapg-section .form-table th,
+    .aiapg-section .form-table td {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .aiapg-section .form-table th {
+        padding-bottom: 5px;
+    }
+
+    .aiapg-section .form-table input[type="text"],
+    .aiapg-section .form-table input[type="password"],
+    .aiapg-section .form-table select {
+        width: 100%;
+        min-width: auto;
+    }
+}
