@@ -1,7 +1,7 @@
 <?php
 /**
- * Plugin Name: AI Auto Post Generator
- * Plugin URI: https://endlessedwork.com
+ * Plugin Name: Ai auto post 404 generator
+ * Plugin URI: https://github.com/Endlessedwork/ai-auto-post-404-generator
  * Description: Automatically generates blog posts from 404 URL keywords using AI (OpenAI GPT, Anthropic Claude, Google Gemini). Supports custom prompts, blocked keywords and URL patterns, rate limiting, AI featured images, SEO meta, and internal linking.
  * Version: 1.0.0
  * Author: Endlessedwork
